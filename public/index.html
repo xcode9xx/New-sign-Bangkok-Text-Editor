@@ -8,6 +8,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><text y=%2226%22 x=%22-1%22 font-size=%2228%22>📂</text></svg>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen transition-all duration-1000 w-full h-full relative bg-slate-300">
@@ -18,6 +22,13 @@
       <input id="text-input" type="text" placeholder="ข้อความของคุณ..." class="p-2 rounded-lg mb-2 w-full" value="สวัสดี โลก">
       <p class="text-black/40 pt-2 text-[13px]">สีข้อความ</p>
       <input id="text-color" type="color" value="#ffffff" class="mb-2 border-2 bg-white/80 border-slate-500">
+       <p class="text-black/40 pt-2 text-[13px]">รูปแบบฟอนต์</p>
+        <select id="font-family" class="mb-2">
+          <option value="Arial">Arial</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Prompt">Prompt</option>
+        </select>
+       
       <p class="text-black/40 pt-2 text-[13px]">ขนาดข้อความ <span id="current-font-size">34</span> px</p>
       <input type="range" min="12" max="72" value="34" class="w-full mb-2" id="fontSize">
     </div>
