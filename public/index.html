@@ -13,11 +13,13 @@
 <body class="flex flex-col items-center justify-center min-h-screen transition-all duration-1000 w-full h-full relative bg-slate-300">
   <div class="max-w-4xl w-full p-4 bg-white rounded-lg shadow-md calendar-container overflow-hidden rounded-2xl smooth-out border-2 bg-white/80 border-slate-200 shadow-2xl ">
     <h1 class="text-xl font-bold mb-4">แก้ไขข้อความ ป้ายใหม่กรุงเทพ!</h1>
-    <div class="mb-4">
+     <div class="mb-4">
       <p class="text-black/40 pt-2 text-[13px]">แก้ไขข้อความ</p>
       <input id="text-input" type="text" placeholder="ข้อความของคุณ..." class="p-2 rounded-lg mb-2 w-full" value="สวัสดี โลก">
+      <p class="text-black/40 pt-2 text-[13px]">สีข้อความ</p>
+      <input id="text-color" type="color" value="#ffffff" class="mb-2">
       <p class="text-black/40 pt-2 text-[13px]">ขนาดข้อความ <span id="current-font-size">34</span> px</p>
-      <input type="range" min="12" max="72" value="34" class="w-full mb-2 " id="fontSize">
+      <input type="range" min="12" max="72" value="34" class="w-full mb-2" id="fontSize">
     </div>
     <div class="flex justify-end ">
       <button onclick="downloadImage()" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg"><i class="fas fa-download mr-2"></i>ดาวน์โหลดรูปภาพ</button>
