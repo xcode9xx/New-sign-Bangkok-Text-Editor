@@ -1,4 +1,4 @@
-  const canvas = document.getElementById('canvas');
+ const canvas = document.getElementById('canvas');
       const ctx = canvas.getContext('2d');
       const textInput = document.getElementById('text-input');
       const fontSizeInput = document.getElementById('font-size');
@@ -40,7 +40,7 @@
       });
 
       function updateFontLoadingProgress(familyName, fvd) {
-        const totalFonts = WebFont.active.length + WebFont.inactive.length;
+        const totalFonts = WebFont.families.length;
         const loadedFonts = WebFont.active.length;
         const percentage = Math.round((loadedFonts / totalFonts) * 100);
         fontLoadingPercentage.textContent = `${percentage}%`;
