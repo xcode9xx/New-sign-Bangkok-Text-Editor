@@ -1,1 +1,79 @@
-const _0x13e8db=_0x4a8c;(function(_0x54e0a3,_0x129bdf){const _0x851f61=_0x4a8c,_0x5a720e=_0x54e0a3();while(!![]){try{const _0x46c1d7=parseInt(_0x851f61(0x132))/0x1*(-parseInt(_0x851f61(0x129))/0x2)+parseInt(_0x851f61(0x11b))/0x3+-parseInt(_0x851f61(0x130))/0x4+-parseInt(_0x851f61(0x118))/0x5+parseInt(_0x851f61(0x13c))/0x6*(-parseInt(_0x851f61(0x133))/0x7)+-parseInt(_0x851f61(0x145))/0x8+parseInt(_0x851f61(0x124))/0x9;if(_0x46c1d7===_0x129bdf)break;else _0x5a720e['push'](_0x5a720e['shift']());}catch(_0x421089){_0x5a720e['push'](_0x5a720e['shift']());}}}(_0x2a9b,0xb5fcb));const canvas=document[_0x13e8db(0x11a)]('canvas'),ctx=canvas[_0x13e8db(0x121)]('2d'),textInput=document[_0x13e8db(0x11a)]('text-input'),fontSizeInput=document[_0x13e8db(0x11a)](_0x13e8db(0x11c)),textColorInput=document[_0x13e8db(0x11a)](_0x13e8db(0x139)),fontFamilyInput=document['getElementById'](_0x13e8db(0x136));let fontSize=parseInt(fontSizeInput[_0x13e8db(0x135)]);const image=new Image();image['src']='./img/sign.webp';const downloadButton=document[_0x13e8db(0x13f)](_0x13e8db(0x143));downloadButton[_0x13e8db(0x13e)](_0x13e8db(0x11f),preventZoomAndScroll),textInput[_0x13e8db(0x13e)](_0x13e8db(0x11f),preventZoomAndScroll),textColorInput[_0x13e8db(0x13e)]('click',preventZoomAndScroll),fontFamilyInput[_0x13e8db(0x13e)](_0x13e8db(0x11f),preventZoomAndScroll),fontSizeInput[_0x13e8db(0x13e)]('click',preventZoomAndScroll),image[_0x13e8db(0x141)]=()=>{initializeCanvas(),drawImageWithText();},textInput['addEventListener']('input',drawImageWithText),fontSizeInput[_0x13e8db(0x13e)](_0x13e8db(0x11d),()=>{const _0x50ac35=_0x13e8db;fontSize=parseInt(fontSizeInput[_0x50ac35(0x135)]),drawImageWithText();}),textColorInput[_0x13e8db(0x13e)](_0x13e8db(0x11d),drawImageWithText),fontFamilyInput['addEventListener'](_0x13e8db(0x123),drawImageWithText);function initializeCanvas(){const _0x3551fe=_0x13e8db;canvas[_0x3551fe(0x12a)]=image['width'],canvas[_0x3551fe(0x144)]=image['height'];}function drawImageWithText(){const _0x1f0ff3=_0x13e8db;ctx[_0x1f0ff3(0x122)](0x0,0x0,canvas[_0x1f0ff3(0x12a)],canvas[_0x1f0ff3(0x144)]),ctx['drawImage'](image,0x0,0x0);const _0x429184=document[_0x1f0ff3(0x11a)](_0x1f0ff3(0x136))[_0x1f0ff3(0x135)];ctx['font']=fontSize+_0x1f0ff3(0x131)+_0x429184,ctx['fillStyle']=document[_0x1f0ff3(0x11a)](_0x1f0ff3(0x139))['value'],ctx['textAlign']='center',ctx[_0x1f0ff3(0x13a)](textInput[_0x1f0ff3(0x135)],canvas[_0x1f0ff3(0x12a)]/0x2,canvas[_0x1f0ff3(0x144)]/1.8),updateCurrentFontSize();}function _0x2a9b(){const _0x5cb3cd=['1267hGxTkM','edited_image_','value','font-family','block','floor','text-color','fillText','none','32334DyEhxo','standalone','addEventListener','querySelector','current-font-size','onload','display','button','height','9211688xDldgX','885325OdWhnx','padStart','getElementById','559191vhUiXq','fontSize','input','.png','click','(display-mode:\x20standalone)','getContext','clearRect','change','45721548REtqAP','resize','matchMedia','innerWidth','toBlob','259260hizxHx','width','toString','textContent','style','preventDefault','load','4720700XnioCS','px\x20','8nALklp'];_0x2a9b=function(){return _0x5cb3cd;};return _0x2a9b();}function downloadImage(){const _0x2c592d=_0x13e8db,_0x47b9c7=Math[_0x2c592d(0x138)](Math['random']()*0x64)[_0x2c592d(0x12b)]()[_0x2c592d(0x119)](0x2,'0');canvas[_0x2c592d(0x128)](_0x225f50=>{const _0x5502ab=_0x2c592d;saveAs(_0x225f50,_0x5502ab(0x134)+_0x47b9c7+_0x5502ab(0x11e));});}function isStandaloneBrowser(){const _0x56d5c0=_0x13e8db,_0x60577f=window['navigator'][_0x56d5c0(0x13d)]||window[_0x56d5c0(0x126)](_0x56d5c0(0x120))['matches'];return!_0x60577f;}function updateCurrentFontSize(){const _0x2e25ae=_0x13e8db,_0x3a9d08=document[_0x2e25ae(0x11a)](_0x2e25ae(0x140));_0x3a9d08[_0x2e25ae(0x12c)]=fontSize;}function hideOnDesktop(){const _0x8291ef=_0x13e8db,_0x28c831=document['getElementById']('browser-warning'),_0xb2ac1a=window[_0x8291ef(0x127)]>=0x300;_0xb2ac1a?_0x28c831[_0x8291ef(0x12d)][_0x8291ef(0x142)]=_0x8291ef(0x13b):_0x28c831[_0x8291ef(0x12d)][_0x8291ef(0x142)]=_0x8291ef(0x137);}function preventZoomAndScroll(_0x16cb57){const _0x1310e8=_0x13e8db;_0x16cb57[_0x1310e8(0x12e)]();}function _0x4a8c(_0xaa3466,_0x5ec492){const _0x2a9bbb=_0x2a9b();return _0x4a8c=function(_0x4a8ca6,_0xb80f6c){_0x4a8ca6=_0x4a8ca6-0x118;let _0x14033a=_0x2a9bbb[_0x4a8ca6];return _0x14033a;},_0x4a8c(_0xaa3466,_0x5ec492);}window[_0x13e8db(0x13e)](_0x13e8db(0x125),hideOnDesktop),window['addEventListener'](_0x13e8db(0x12f),hideOnDesktop);
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const textInput = document.getElementById('text-input');
+const fontSizeInput = document.getElementById('fontSize');
+const textColorInput = document.getElementById('text-color');
+const fontFamilyInput = document.getElementById('font-family');
+let fontSize = parseInt(fontSizeInput.value);
+const image = new Image();
+image.src = './img/sign.webp';
+const downloadButton = document.querySelector('button');
+
+downloadButton.addEventListener('click', preventZoomAndScroll);
+textInput.addEventListener('click', preventZoomAndScroll);
+textColorInput.addEventListener('click', preventZoomAndScroll);
+fontFamilyInput.addEventListener('click', preventZoomAndScroll);
+fontSizeInput.addEventListener('click', preventZoomAndScroll);
+
+image.onload = () => {
+  initializeCanvas();
+  drawImageWithText();
+};
+
+textInput.addEventListener('input', drawImageWithText);
+fontSizeInput.addEventListener('input', () => {
+  fontSize = parseInt(fontSizeInput.value);
+  drawImageWithText();
+});
+textColorInput.addEventListener('input', drawImageWithText);
+fontFamilyInput.addEventListener('change', drawImageWithText);
+
+function initializeCanvas() {
+  canvas.width = image.width;
+  canvas.height = image.height;
+}
+
+function drawImageWithText() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(image, 0, 0);
+  const fontFamily = document.getElementById('font-family').value;
+  ctx.font = `${fontSize}px ${fontFamily}`;
+  ctx.fillStyle = document.getElementById('text-color').value;
+  ctx.textAlign = 'center';
+  ctx.fillText(textInput.value, canvas.width / 2, canvas.height / 1.8);
+  updateCurrentFontSize();
+}
+
+function downloadImage() {
+  const randomCode = Math.floor(Math.random() * 100).toString().padStart(2, '0');
+  canvas.toBlob((blob) => {
+    saveAs(blob, `edited_image_${randomCode}.png`);
+  });
+}
+
+function isStandaloneBrowser() {
+  const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+  return !isStandalone;
+}
+
+function updateCurrentFontSize() {
+  const currentFontSizeElement = document.getElementById('current-font-size');
+  currentFontSizeElement.textContent = fontSize;
+}
+
+function hideOnDesktop() {
+  const browserWarning = document.getElementById('browser-warning');
+  const isDesktop = window.innerWidth >= 768;
+  if (isDesktop) {
+    browserWarning.style.display = 'none';
+  } else {
+    browserWarning.style.display = 'block';
+  }
+}
+
+function preventZoomAndScroll(event) {
+  event.preventDefault();
+}
+
+window.addEventListener('resize', hideOnDesktop);
+window.addEventListener('load', hideOnDesktop);
