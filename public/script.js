@@ -4,7 +4,7 @@ const textInput = document.getElementById('text-input');
 const fontSizeInput = document.getElementById('fontSize');
 let fontSize = parseInt(fontSizeInput.value);
 const image = new Image();
-image.src = './img/bg.webp';
+image.src = './img/sign.webp';
 
 image.onload = () => {
   initializeCanvas();
