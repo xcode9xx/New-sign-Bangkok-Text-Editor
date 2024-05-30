@@ -8,18 +8,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22><text y=%2226%22 x=%22-1%22 font-size=%2228%22>📂</text></svg>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&family=Sarabun:wght@400;700&family=Kanit:wght@400;700&family=Mitr:wght@400;700&family=Athiti:wght@400;700&family=Anuphan:wght@400;700&display=swap" rel="stylesheet">
-  
-  
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&family=Sarabun:wght@400;700&family=Kanit:wght@400;700&family=Mitr:wght@400;700&family=Athiti:wght@400;700&family=Anuphan:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen transition-all duration-1000 w-full h-full relative bg-slate-300">
-  <div class="max-w-4xl w-full p-4 bg-white rounded-lg shadow-md calendar-container overflow-hidden rounded-2xl smooth-out border-2 bg-white/80 border-slate-200 shadow-2xl ">
+  <div class="max-w-4xl w-full p-4 bg-white rounded-lg shadow-md text-editor-container overflow-hidden rounded-2xl smooth-out border-2 bg-white/80 border-slate-200 shadow-2xl">
     <h1 class="text-xl font-bold mb-4">แก้ไขข้อความ ป้ายใหม่กรุงเทพ!</h1>
-     <div class="mb-4">
+    <div class="mb-4">
       <p class="text-black/40 pt-2 text-[13px]">แก้ไขข้อความ</p>
       <input id="text-input" type="text" placeholder="ข้อความของคุณ..." class="p-2 rounded-lg mb-2 w-full" value="สวัสดี โลก">
       <p class="text-black/40 pt-2 text-[13px]">สีข้อความ</p>
@@ -34,13 +31,19 @@
         <option value="Mitr">Mitr</option>
         <option value="Athiti">Athiti</option>
         <option value="Anuphan">Anuphan</option>
+        <option value="Roboto">Roboto</option>
+        <option value="Poppins">Poppins</option>
+        <option value="Lato">Lato</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Open Sans">Open Sans</option>
       </select>
-       
       <p class="text-black/40 pt-2 text-[13px]">ขนาดข้อความ <span id="current-font-size">34</span> px</p>
-      <input type="range" min="12" max="72" value="60" class="w-full mb-2" id="fontSize">
+      <input type="range" min="12" max="72" value="60" class="w-full mb-2" id="font-size">
     </div>
-    <div class="flex justify-end ">
-      <button onclick="downloadImage()" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg"><i class="fas fa-download mr-2"></i>ดาวน์โหลดรูปภาพ</button>
+    <div class="flex justify-end">
+      <button onclick="downloadImage()" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg">
+        <i class="fas fa-download mr-2"></i>ดาวน์โหลดรูปภาพ
+      </button>
     </div>
     <p id="browser-warning" class="text-black/40 text-[15px]">แนะนำเปิดด้วยบราวเซอร์จะโหลดรูปได้</p>
     <div class="relative mb-4 pt-3">
@@ -55,6 +58,5 @@
   </div>
   <script src="script.js"></script>
   <script src="hook.js"></script>
-  
 </body>
 </html>
