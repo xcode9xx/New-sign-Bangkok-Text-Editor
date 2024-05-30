@@ -33,45 +33,13 @@ function drawImageWithText() {
 }
 
 function downloadImage() {
-  const downloadButton = document.querySelector('button');
-  downloadButton.classList.add('updating');
-
-  fetch('/download')
-    .then(response => response.json())
-    .then(data => {
-      const link = document.createElement('a');
-      link.download = `edited_image_${data.downloadCount}.png`;
-      link.href = canvas.toDataURL();
-      link.click();
-      updateDownloadCount(data.downloadCount);
-      downloadButton.classList.remove('updating');
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      downloadButton.classList.remove('updating');
-    });
-}
-
-function updateDownloadCount(count) {
-  const downloadCountElement = document.getElementById('download-count');
-  downloadCountElement.textContent = count;
-}
-
-window.addEventListener('load', () => {
-  fetch('/downloadCount')
-    .then(response => response.json())
-    .then(data => {
-      updateDownloadCount(data.downloadCount);
-    });
-});
-
-
-function updateCurrentFontSize() {
-    const currentFontSizeElement = document.getElementById('current-font-size');
-    currentFontSizeElement.textContent = fontSize;
+    const randomCode = Math.floor(Math.random() * 100).toString().padStart(2, '0');
+    const link = document.createElement('a');
+    link.download = `edited_image_${randomCode}.png`;
+    link.href = canvas.toDataURL();
+    link.click();
   }
-  
-  fontSizeInput.addEventListener('input', () => {
-    fontSize = parseInt(fontSizeInput.value);
-    drawImageWithText();
-  });
+function updateCurrentFontSize() {
+  const currentFontSizeElement = document.getElementById('current-font-size');
+  currentFontSizeElement.textContent = fontSize;
+}
