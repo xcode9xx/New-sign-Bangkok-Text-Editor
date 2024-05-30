@@ -1,5 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-  const canvas = document.getElementById('canvas');
+ const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
   const textInput = document.getElementById('text-input');
   const fontSizeInput = document.getElementById('font-size');
@@ -73,4 +72,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
       saveAs(blob, `edited_image_${randomCode}.png`);
     });
   }
-});
