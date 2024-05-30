@@ -2,6 +2,9 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const textInput = document.getElementById('text-input');
 const fontSizeInput = document.getElementById('fontSize');
+const textColorInput = document.getElementById('text-color');
+textColorInput.addEventListener('input', drawImageWithText);
+
 let fontSize = parseInt(fontSizeInput.value);
 const image = new Image();
 image.src = './img/sign.webp';
@@ -28,11 +31,12 @@ function drawImageWithText() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(image, 0, 0);
   ctx.font = `${fontSize}px Arial`;
-  ctx.fillStyle = 'white';
+  ctx.fillStyle = document.getElementById('text-color').value;
   ctx.textAlign = 'center';
   ctx.fillText(textInput.value, canvas.width / 2, canvas.height / 1.8);
   updateCurrentFontSize();
 }
+
 function downloadImage() {
     const randomCode = Math.floor(Math.random() * 100).toString().padStart(2, '0');
     canvas.toBlob((blob) => {
