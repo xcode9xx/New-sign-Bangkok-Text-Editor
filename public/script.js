@@ -11,9 +11,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const image = new Image();
   image.src = './img/sign.webp';
 
-  const downloadButton = document.querySelector('button');
-  downloadButton.addEventListener('click', downloadImage);
-
   textInput.addEventListener('input', drawImageWithText);
   fontSizeInput.addEventListener('input', () => {
     fontSize = parseInt(fontSizeInput.value);
@@ -45,13 +42,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     updateCurrentFontSize();
   }
 
-  function downloadImage() {
-    const randomCode = Math.floor(Math.random() * 100).toString().padStart(2, '0');
-    canvas.toBlob((blob) => {
-      saveAs(blob, `edited_image_${randomCode}.png`);
-    });
-  }
-
   function updateCurrentFontSize() {
     const currentFontSizeElement = document.getElementById('current-font-size');
     currentFontSizeElement.textContent = fontSize;
@@ -73,4 +63,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   window.addEventListener('resize', hideOnDesktop);
   window.addEventListener('load', hideOnDesktop);
+
+  const downloadButton = document.querySelector('button');
+  downloadButton.addEventListener('click', downloadImage);
+
+  function downloadImage() {
+    const randomCode = Math.floor(Math.random() * 100).toString().padStart(2, '0');
+    canvas.toBlob((blob) => {
+      saveAs(blob, `edited_image_${randomCode}.png`);
+    });
+  }
 });
