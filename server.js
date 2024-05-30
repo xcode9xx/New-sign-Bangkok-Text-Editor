@@ -8,7 +8,7 @@ const throttle = require('express-throttle');
 
 const downloadDataFile = 'downloadData.json';
 
-// Load download count from JSON file or initialize it
+
 let downloadData = {
     count: 0
 };
@@ -35,7 +35,6 @@ app.get('/download', downloadThrottle, (req, res) => {
     downloadData.count++;
     req.session.downloadCount = downloadData.count;
 
-    // Save download count to JSON file
     fs.writeFileSync(downloadDataFile, JSON.stringify(downloadData));
 
     res.json({ downloadCount: downloadData.count });
